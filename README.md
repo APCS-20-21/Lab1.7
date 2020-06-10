@@ -58,7 +58,7 @@ public static int findKeyword(String message, String keyword)
 
 Read the comment associated with that method to learn what it is *supposed* to do so that you can call it appropriately in the process method. How can you use that method to determine whether the word "sleep" is in message or not?
 
-### Part 4: findKeyword version 2
+### Part 4: findKeyword
 
 The findKeyword method will identify the index of a keyword in a message, but it will ignore the keyword if it is inside another word.
 
