@@ -17,12 +17,13 @@ You will update this method to keep reading input from the user until the user e
 
 You want to write code in the main method that follows the following algorithm:
 
-get data from the user
-
-while that data is not the empty string
-* process it
-* output the response
-* get more data from the user
+```
+1. get data from the user
+2. while that data is not the empty string
+   a. process it
+   b. output the response
+   c. get more data from the user
+```
 
 You can test this code by running it and typing several messages into your program. It should keep saying "That's interesting." until you enter an empty string by just pressing the enter key. For example:
 
@@ -38,17 +39,21 @@ That's interesting.
 
 ### Part 2: process
 
-The process method is setup to just return a single message. You should change it so that it returns the response "Sleep1 That's where I'm a viking!" if the message contains the word "sleep".
+The process method is setup to just return a single message. You should change it so that it uses the findKeyword method to identify if the message contains the word "sleep", and it if does this method should return the response "Sleep! That's where I'm a viking!"
 
 For example:
-
 ```
 Hello.
 I want to go to sleep
 Sleep! That's where I'm a viking!
 ```
+The algorithm for this method should look something like this:
+1. use findKeyword to find the index of "sleep" in the message variable
+2. Use the value returned from findKeyword to identify if the message contained the keyword "sleep" or not.
+3. If it did, then return the String "Sleep! That's where I'm a viking!"
+4. If it did not, then return the String "That's interesting."
 
-However, it won't quite work because the findKeyword method isn't programmed correctly (yet).
+However, this algorithm won't quite work because the findKeyword method isn't programmed correctly (yet).
 
 Notice the findKeyword method is declared later in the program:
 
@@ -58,7 +63,7 @@ public static int findKeyword(String message, String keyword)
 
 Read the comment associated with that method to learn what it is *supposed* to do so that you can call it appropriately in the process method. How can you use that method to determine whether the word "sleep" is in message or not?
 
-### Part 4: findKeyword
+### Part 3: findKeyword
 
 The findKeyword method will identify the index of a keyword in a message, but it will ignore the keyword if it is inside another word.
 
@@ -90,10 +95,25 @@ After you accomplish each of the above goals, test your code to make sure it wor
 
 Run your program and enter different messages. Make sure you get the appropriate response from your program. Make sure to test your code for situations where your if-statements should evaluate to true, and for situations where your if-statement should evaluate to false.
 
+For example:
+```
+Hello.
+I will sleep when I'm tired
+Sleep! That's where I'm a viking!
+Are you asleep
+That's interesting.
+sleeping is for the birds
+That's interesting
+sleep sleep sleep
+Sleep! That's where I'm a viking!
+go to sleep
+Sleep! That's where I'm a viking!
+```
+
 ## Grading
 
 This lab will be automatically graded by comparing the output of the program to the expected output. If your output matches the expected output, then you will receive credit for this lab.
 
 ## Turning it in
 
-When you have finished this lab, upload it to [MrMayCS.com/turnitin](http://mrmaycs.com/turnitin)
+When you have finished this lab, upload it to [turnerinner.com/@mrmaycs](https://turnerinner.com/@mrmaycs)
