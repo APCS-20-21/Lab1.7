@@ -69,7 +69,7 @@ The findKeyword method will identify the index of a keyword in a message, but it
 
 Consider these examples:
 
-* findKeyword("I will sleep when I'm tired", "sleep") -> 2
+* findKeyword("I will sleep when I'm tired", "sleep") -> 7
 * findKeyword("Are you asleep", "sleep") -> -1
 * findKeyword("sleeping is for the birds", "sleep") -> -1
 * findKeyword("sleep sleep sleep", "sleep") -> 0
