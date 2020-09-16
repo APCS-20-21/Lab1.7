@@ -76,9 +76,11 @@ Consider these examples:
 
 To accomplish this your code needs to check for the following situations
 
-* Does the message contain they keyword at all?
+* Does the message contain the keyword at all?
 * Is the character before the keyword a space?
 * Is the character after the keyword a space?
+
+If any of the above conditions is false, what value should this method return?
 
 Make sure you check for the situation where the keyword is the first word in the message and when it is the last word in the message! (Hint: there isn't a character before the first word in the message and there isn't a character after the last word in the message)
 
